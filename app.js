@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.get('/posts', async (req, res) => {
   const storedPosts = await getStoredPosts();
-  await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500)); // simulates slower backend like in most real cases
+  await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500)); // 1.5 sec delay to simulate slower backend like in most real cases
   res.json({ posts: storedPosts });
 });
 
